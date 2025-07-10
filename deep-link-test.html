@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Teste Deep Link - Marketplace</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #F2F2F7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #FFFFFF;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      max-width: 90%;
+      width: 100%;
+    }
+
+    h1 {
+      color: #000000;
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      padding: 20px 24px;
+      margin-bottom: 20px;
+      background-color: #ea5b0c;
+      color: #FFFFFF;
+      text-decoration: none;
+      border-radius: 12px;
+      font-size: 18px;
+      font-weight: 600;
+      text-align: center;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      min-height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .button:hover {
+      background-color: #d14a0a;
+      transform: translateY(-1px);
+    }
+
+    .button:active {
+      transform: translateY(0);
+    }
+
+    .button.secondary {
+      background-color: #5856D6;
+    }
+
+    .button.secondary:hover {
+      background-color: #4a49c4;
+    }
+
+    .button.outline {
+      background-color: transparent;
+      color: #ea5b0c;
+      border: 2px solid #ea5b0c;
+    }
+
+    .button.outline:hover {
+      background-color: #ea5b0c;
+      color: #FFFFFF;
+    }
+
+    .button:last-child {
+      margin-bottom: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Teste Deep Link</h1>
+    
+    <a href="intent://#Intent;scheme=marketplace;package=com.marketplace;end" class="button">
+      Home
+    </a>
+    
+    <a href="intent://product/1#Intent;scheme=marketplace;package=com.marketplace;end" class="button secondary">
+      Produto 1
+    </a>
+    
+    <a href="intent://product/2#Intent;scheme=marketplace;package=com.marketplace;end" class="button">
+      Produto 2
+    </a>
+    
+    <a href="intent://product/123#Intent;scheme=marketplace;package=com.marketplace;end" class="button secondary">
+      Produto 123
+    </a>
+  </div>
+</body>
+</html> 
