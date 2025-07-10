@@ -1,97 +1,237 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# MarketPlace - React Native App
 
-# Getting Started
+A marketplace application developed with React Native, TypeScript, Redux Toolkit, and React Navigation.
 
-> **Note**: Make sure you have completed the [Set Up Your Environment](https://reactnative.dev/docs/set-up-your-environment) guide before proceeding.
+## 📋 Prerequisites
 
-## Step 1: Start Metro
+- Node.js >= 18
+- Yarn or npm
+- React Native CLI
+- Android Studio (for Android development)
+- Xcode (for iOS development - macOS only)
 
-First, you will need to run **Metro**, the JavaScript build tool for React Native.
+## 🚀 How to Install the Project
 
-To start the Metro dev server, run the following command from the root of your React Native project:
-
-```sh
-# Using npm
-npm start
-
-# OR using Yarn
-yarn start
+### 1. Clone the repository
+```bash
+git clone https://github.com/welington-olive/MarketPlace.git
+cd MarketPlace
 ```
 
-## Step 2: Build and run your app
+### 2. Install dependencies
+```bash
+# Using Yarn (recommended)
+yarn install
 
-With Metro running, open a new terminal window/pane from the root of your React Native project, and use one of the following commands to build and run your Android or iOS app:
+# Or using npm
+npm install
+```
+
+### 3. Install iOS dependencies (macOS only)
+```bash
+cd ios
+pod install
+cd ..
+```
+
+### 4. Configure environment variables (if needed)
+Create a `.env` file in the project root if there are specific configurations.
+
+## 🏃‍♂️ How to Run the Project
 
 ### Android
+```bash
+# Start Metro bundler
+yarn start
 
-```sh
-# Using npm
-npm run android
-
-# OR using Yarn
+# In another terminal, run the Android app
 yarn android
 ```
 
-### iOS
+### iOS (macOS only)
+```bash
+# Start Metro bundler
+yarn start
 
-For iOS, remember to install CocoaPods dependencies (this only needs to be run on first clone or after updating native deps).
-
-The first time you create a new project, run the Ruby bundler to install CocoaPods itself:
-
-```sh
-bundle install
-```
-
-Then, and every time you update your native dependencies, run:
-
-```sh
-bundle exec pod install
-```
-
-For more information, please visit [CocoaPods Getting Started guide](https://guides.cocoapods.org/using/getting-started.html).
-
-```sh
-# Using npm
-npm run ios
-
-# OR using Yarn
+# In another terminal, run the iOS app
 yarn ios
 ```
 
-If everything is set up correctly, you should see your new app running in the Android Emulator, iOS Simulator, or your connected device.
+## 🧪 How to Run Tests
 
-This is one way to run your app — you can also build it directly from Android Studio or Xcode.
+### Run all tests
+```bash
+# Using Yarn
+yarn test
 
-## Step 3: Modify your app
+# Or using npm
+npm test
+```
 
-Now that you have successfully run the app, let's make changes!
+## 🔗 Deep Links
 
-Open `App.tsx` in your text editor of choice and make some changes. When you save, your app will automatically update and reflect these changes — this is powered by [Fast Refresh](https://reactnative.dev/docs/fast-refresh).
+### How to use Deep Links
 
-When you want to forcefully reload, for example to reset the state of your app, you can perform a full reload:
+The application supports deep links with the `marketplace://` scheme. To test deep links, you need to use the `deep-link-test.html` file that is in the project root.
 
-- **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Dev Menu**, accessed via <kbd>Ctrl</kbd> + <kbd>M</kbd> (Windows/Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (macOS).
-- **iOS**: Press <kbd>R</kbd> in iOS Simulator.
+### Why use the HTML file?
 
-## Congratulations! :tada:
+Modern browsers (like Chrome) block the automatic execution of links with custom schemes (`marketplace://`, `intent://`) when typed directly in the address bar. For security reasons, only clickable links (via `<a href="...">`) or user interactions can trigger deep links.
 
-You've successfully run and modified your React Native App. :partying_face:
+### How to test Deep Links
 
-### Now what?
+1. **Copy the `deep-link-test.html` file to the device** where the APK is installed
+2. **Open the HTML file** in the device's browser
+3. **Click the buttons** to test different deep links
 
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [docs](https://reactnative.dev/docs/getting-started).
+### Available Deep Links
 
-# Troubleshooting
+- `marketplace://` - Navigate to home screen
+- `marketplace://product/1` - Navigate to product with ID 1
+- `marketplace://product/2` - Navigate to product with ID 2
+- `marketplace://product/123` - Navigate to product with ID 123
 
-If you're having issues getting the above steps to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
+## 📁 Project Structure
 
-# Learn More
+```
+src/
+├── components/          # Reusable components
+├── constants/          # Application constants
+├── hooks/              # Custom hooks
+├── i18n/               # Internationalization
+├── navigation/         # Navigation configuration
+├── screens/            # Application screens
+├── services/           # Services and APIs
+├── store/              # Redux store and slices
+└── types/              # TypeScript type definitions
+```
 
-To learn more about React Native, take a look at the following resources:
+## 📱 Technologies Used
 
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+- **React Native** - Mobile framework
+- **TypeScript** - Static typing
+- **Redux Toolkit** - State management
+- **React Navigation** - Navigation
+- **Styled Components** - Styling
+- **Jest** - Testing
+- **Axios** - HTTP requests
+
+---
+
+# MarketPlace - Aplicativo React Native
+
+Um aplicativo de marketplace desenvolvido em React Native com TypeScript, Redux Toolkit e React Navigation.
+
+## 📋 Pré-requisitos
+
+- Node.js >= 18
+- Yarn ou npm
+- React Native CLI
+- Android Studio (para desenvolvimento Android)
+- Xcode (para desenvolvimento iOS - apenas macOS)
+
+## 🚀 Como Instalar o Projeto
+
+### 1. Clone o repositório
+```bash
+git clone https://github.com/welington-olive/MarketPlace.git
+cd MarketPlace
+```
+
+### 2. Instale as dependências
+```bash
+# Usando Yarn (recomendado)
+yarn install
+
+# Ou usando npm
+npm install
+```
+
+### 3. Instale as dependências do iOS (apenas macOS)
+```bash
+cd ios
+pod install
+cd ..
+```
+
+### 4. Configure as variáveis de ambiente (se necessário)
+Crie um arquivo `.env` na raiz do projeto se houver configurações específicas.
+
+## 🏃‍♂️ Como Executar o Projeto
+
+### Android
+```bash
+# Inicie o Metro bundler
+yarn start
+
+# Em outro terminal, execute o app Android
+yarn android
+```
+
+### iOS (apenas macOS)
+```bash
+# Inicie o Metro bundler
+yarn start
+
+# Em outro terminal, execute o app iOS
+yarn ios
+```
+
+## 🧪 Como Executar os Testes
+
+### Executar todos os testes
+```bash
+# Usando Yarn
+yarn test
+
+# Ou usando npm
+npm test
+```
+
+## 🔗 Deep Links
+
+### Como usar Deep Links
+
+O aplicativo suporta deep links com o esquema `marketplace://`. Para testar os deep links, você precisa usar o arquivo `deep-link-test.html` que está na raiz do projeto.
+
+### Por que usar o arquivo HTML?
+
+Navegadores modernos (como o Chrome) bloqueiam a execução automática de links com esquema personalizado (`marketplace://`, `intent://`) quando digitados diretamente na barra de endereços. Por questões de segurança, apenas links clicáveis (via `<a href="...">`) ou interações de usuário podem disparar deep links.
+
+### Como testar Deep Links
+
+1. **Copie o arquivo `deep-link-test.html` para o dispositivo** onde o APK está instalado
+2. **Abra o arquivo HTML** no navegador do dispositivo
+3. **Clique nos botões** para testar diferentes deep links
+
+### Deep Links disponíveis
+
+- `marketplace://` - Navega para a tela inicial
+- `marketplace://product/1` - Navega para o produto com ID 1
+- `marketplace://product/2` - Navega para o produto com ID 2
+- `marketplace://product/123` - Navega para o produto com ID 123
+
+## 📁 Estrutura do Projeto
+
+```
+src/
+├── components/          # Componentes reutilizáveis
+├── constants/          # Constantes da aplicação
+├── hooks/              # Custom hooks
+├── i18n/               # Internacionalização
+├── navigation/         # Configuração de navegação
+├── screens/            # Telas da aplicação
+├── services/           # Serviços e APIs
+├── store/              # Redux store e slices
+└── types/              # Definições de tipos TypeScript
+```
+
+## 📱 Tecnologias Utilizadas
+
+- **React Native** - Framework mobile
+- **TypeScript** - Tipagem estática
+- **Redux Toolkit** - Gerenciamento de estado
+- **React Navigation** - Navegação
+- **Styled Components** - Estilização
+- **Jest** - Testes
+- **Axios** - Requisições HTTP
