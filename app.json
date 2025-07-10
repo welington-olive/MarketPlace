@@ -1,0 +1,27 @@
+{
+  "name": "MarketPlace",
+  "displayName": "MarketPlace",
+  "expo": {
+    "android": {
+      "package": "com.marketplace",
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "https",
+              "host": "marketplace.com"
+            }
+          ],
+          "category": ["BROWSABLE", "DEFAULT"]
+        }
+      ]
+    },
+    "ios": {
+      "bundleIdentifier": "com.marketplace",
+      "associatedDomains": ["applinks:marketplace.com"]
+    },
+    "scheme": "marketplace"
+  }
+}
